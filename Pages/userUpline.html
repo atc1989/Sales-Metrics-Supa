@@ -1,0 +1,69 @@
+<section id="user-upline-section" class="page">
+  <header class="page-header">
+    <div class="page-header-row">
+      <div class="page-header-left">
+        <h1 class="page-title">User Upline</h1>
+        <p class="page-subtitle">This page will list user upline data from the API.</p>
+      </div>
+
+      <div class="page-header-right">
+        <span class="status-pill status-pill--checking" id="conn-indicator-userUpline">
+          <span class="status-dot"></span>
+          <span class="status-text">Checking…</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <form id="user-upline-filter-form" class="toolbar">
+    <label>
+      Username
+      <input type="text"
+             id="user-upline-username"
+             placeholder="Enter username (e.g. Royalty01)"
+             aria-label="Username for upline lookup" />
+    </label>
+    <button type="submit">Apply</button>
+  </form>
+
+  <div class="table-toolbar">
+    <div class="table-toolbar-left">
+      <label class="table-search-label">
+        Table search
+        <div class="table-search-row">
+          <input
+            type="text"
+            id="user-upline-table-search"
+            class="table-search-input"
+            placeholder="Search in current results…"
+            aria-label="Search in table"
+          />
+          <button
+            type="button"
+            id="user-upline-table-search-clear"
+            class="table-search-clear-btn"
+            disabled
+          >
+            Clear
+          </button>
+        </div>
+      </label>
+    </div>
+    <div class="table-toolbar-right">
+      <button type="button" id="user-upline-export-csv" class="export-btn">
+        CSV
+      </button>
+      <button type="button" id="user-upline-export-xlsx" class="export-btn">
+        Excel
+      </button>
+      <button type="button" id="user-upline-export-pdf" class="export-btn">
+        PDF
+      </button>
+    </div>
+  </div>
+
+  <div id="user-upline-summary" class="card-grid"></div>
+  <div class="table-wrapper">
+    <div id="user-upline-table-container" class="table-container"></div>
+  </div>
+</section>
